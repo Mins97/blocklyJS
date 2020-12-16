@@ -31,13 +31,13 @@ Open [http://localhost:3000/](http://localhost:3000/)
 ### GIT 업데이트
 
 ```
-npm run push
+npm run upload
 ```
 
 ### Firebase hosting 배포하기
 
 ```
-yarn build && firebase deploy --only hosting:blocklyjs-50
+npm run deploy
 ```
 
 ### Firebase hosting 브라우저로 보기
