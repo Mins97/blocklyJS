@@ -18,7 +18,7 @@
     "deploy": "npm run build && firebase deploy --only hosting:blocklyjs-50",
     "upload": "git add . && git commit -m \"readme.md 수정중\" && git push",
     "open_firebase": "start chrome https://blocklyjs-50.web.app/",
-    "push": "npm run deploy && npm run upload && npm run open_firebase"
+    "push": "npm run deploy && npm run open_firebase && npm run upload"
   },
   "eslintConfig": {
     "extends": "react-app"
