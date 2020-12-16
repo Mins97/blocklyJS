@@ -1,5 +1,8 @@
 [Home](../README.md)
 
+blockly-react-sample를 활용하여 blockly-js의 expansion를 개발하는 것을 목적으로합니다.
+
+[업데이트]
 # blockly-react-sample [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
 This sample shows how to load Blockly in a [React](https://reactjs.org/) project.

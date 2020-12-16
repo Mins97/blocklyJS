@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "push": "git add . && git commit -m \"readme.md 수정중\" && git push"
   },
   "eslintConfig": {
     "extends": "react-app"
