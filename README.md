@@ -49,3 +49,9 @@ Open [https://blocklyjs.web.app/](https://blocklyjs.web.app/)
 [react-blockly](https://github.com/nbudin/react-blockly):
 A React component that embeds Blockly. It uses the official [Blockly npm package](https://www.npmjs.com/package/blockly).
 "# blocklyJS" 
+
+### 기초 이론
+[google blockly tools](https://developers.google.com/blockly/guides/create-custom-blocks/blockly-developer-tools)
+
+### 개발자 블록 생성기
+[blockly-demo](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)
