@@ -15,21 +15,27 @@ This sample shows how to load Blockly in a [React](https://reactjs.org/) project
 npm install
 ```
 
-### Running
+### 로컬 실행 테스트
 
 ```
 npm run start
 ```
-
+하고
+```
+Open [http://localhost:3000/](http://localhost:3000/)
+```
 ### 업데이트
 
 ```
 npm run push
 ```
 
-### Browse
+### 배포하기
+firebase deploy --only hosting:blocklyjs-50
 
-Open [http://localhost:3000/](http://localhost:3000/)
+### 브라우저로 보기
+
+Open [https://blocklyjs.web.app/](https://blocklyjs.web.app/)
 
 ## Community projects
 
