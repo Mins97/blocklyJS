@@ -21,6 +21,12 @@ npm install
 npm run start
 ```
 
+### 업데이트
+
+```
+npm run push
+```
+
 ### Browse
 
 Open [http://localhost:3000/](http://localhost:3000/)
