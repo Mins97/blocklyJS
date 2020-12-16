@@ -13,14 +13,9 @@
   },
   "scripts": {
     "audit": "npm audit fix",
-    "update": "npm update",
-    "postinstall": "cp -r node_modules/blockly/media public/media",
-    "predeploy": "npm run build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "push": "git add . && git commit -m \"readme.md 수정중\" && git push"
+    "deploy": "firebase deploy --only hosting:blocklyjs-50",
+    "upload": "git add . && git commit -m \"readme.md 수정중\" && git push"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -50,8 +50,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" style={{ height: "20%" }} />
-          <button onClick={this.generateCode}>Convert</button>
+          <img src={logo} className="App-logo" alt="logo" />
+          <button onClick={this.generateCode}>소스로 변환 Convert [F12를 눌러 Console에서 확인]</button>
           <BlocklyComponent ref={this.simpleWorkspace}
             readOnly={false} trashcan={true} media={'media/'}
             move={{
