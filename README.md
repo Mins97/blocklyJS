@@ -1,7 +1,7 @@
 # 프로젝트 목적
 
- blockly-react-sample(https://github.com/google/blockly-samples/tree/master/examples/blockly-react)를 활용하여 blockly-js의 expansion를 개발하는 것을 목적으로합니다.
- MDN(https://developer.mozilla.org/en-US/docs/Web/JavaScript)을 기준으로 javascript의 함수 기능들을 블록코딩으로 가능하도록 만들어줍니다.
+ [blockly-react-sample](https://github.com/google/blockly-samples/tree/master/examples/blockly-react)를 활용하여 blockly-js의 expansion를 개발하는 것을 목적으로합니다.
+ [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)을 기준으로 javascript의 함수 기능들을 블록코딩으로 가능하도록 만들어줍니다.
 
 [업데이트 내역](./update.md)
 
