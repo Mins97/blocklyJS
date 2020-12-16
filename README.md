@@ -37,7 +37,7 @@ npm run push
 ### Firebase hosting 배포하기
 
 ```
-firebase deploy --only hosting:blocklyjs-50
+yarn build && firebase deploy --only hosting:blocklyjs-50
 ```
 
 ### Firebase hosting 브라우저로 보기
@@ -55,3 +55,6 @@ A React component that embeds Blockly. It uses the official [Blockly npm package
 
 ### 개발자 블록 생성기
 [blockly-demo](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)
+
+### blockly의 내부 핵심 코드(npm i 필수)
+해당폴더:\blockly-samples-master\examples\blockly-react\node_modules\blockly\generators\javascript에서 colour.js/lists.js/login.js/loops.js/math.js/procedures.js/text.js/variables_dynamic.js/variables.js에서 확인한다.
