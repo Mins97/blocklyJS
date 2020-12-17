@@ -13,3 +13,13 @@ iframe{
   bottom:0;
   right:0;
 }
+.blocklyToolboxDiv{
+  background-color:rgb(61, 128, 252);
+  padding:0px;
+}
+.blocklyTreeRow{
+  line-height:normal;
+}
+.blocklyTreeRow.blocklyTreeSelected{
+  background-color:rgb(58, 61, 250) !important;
+}

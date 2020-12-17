@@ -20,7 +20,7 @@
     "upload": "git add . && git commit -m \"src 본격 코딩 시작\" && git push",
     "open_git": "start chrome https://github.com/Mins97/blocklyJS",
     "open_firebase": "start chrome https://blocklyjs-50.web.app/",
-    "push": "npm run deploy && npm run open_firebase && npm run upload"
+    "push": "npm run deploy && npm run upload"
   },
   "eslintConfig": {
     "extends": "react-app"
