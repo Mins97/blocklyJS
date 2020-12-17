@@ -1,5 +1,5 @@
 ### 프로젝트 바로 보기
-  Open [https://blocklyjs.web.app/](https://blocklyjs.web.app/)
+  Open [https://blocklyjs-50.web.app/](https://blocklyjs-50.web.app/)
 
 # 프로젝트 목적
 
@@ -42,7 +42,7 @@ npm run deploy
 
 ### Firebase hosting 브라우저로 보기
 
-Open [https://blocklyjs-50.web.app/](https://blocklyjs-50.web.app/)
+  Open [https://blocklyjs-50.web.app/](https://blocklyjs-50.web.app/)
 
 ## Community projects
 
