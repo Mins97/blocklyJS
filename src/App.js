@@ -1,27 +1,8 @@
-/**
- * @license
- *
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
-/**
- * @fileoverview Main React component that includes the Blockly component.
- * @author samelh@google.com (Sam El-Husseini)
- */
 import React from 'react';
 import './App.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import logo from './logo.svg';
 
@@ -38,15 +19,39 @@ class App extends React.Component {
     this.simpleWorkspace = React.createRef();
     this.state = { headerToggle: true }
   }
-
   generateCode = () => {
     var code = BlocklyJS.workspaceToCode(
       this.simpleWorkspace.current.workspace
     );
-    navigator.clipboard.writeText(code);
+    navigator.clipboard.writeText(code); //코드 Ctrl + C 해주는 부분
     console.log(code);
+    //알림창
+    toast.info('📋코드는 F12를 눌러 Console에서 확인하거나 Ctrl+V 붙여넣기로 확인할 수 있습니다.', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      style: { fontSize: 15 }
+    });
   }
-
+  help = () => {
+    prompt("❓아래의 내용을 JS가장 상단에 붙여 넣어주세요!\n\
+    그리고나서 그곳에 복사한 코드를 붙여넣어보세요! ", "document.getElementsByTagName(\"p\")[0].innerHTML  =\"여기에 값을 입력하세요.");
+  }
+  exam = () => {
+    prompt("🔑아래의 내용을 JS가장 상단에 붙여 넣어주세요!\n\
+    ", "if (true) {\
+	var a = 111;\
+    var b = 111;\
+  } else {\
+  var a = 999;\
+  var b = 999;\
+}\
+document.getElementsByTagName(\"p\")[0].innerHTML = a + b");
+  }
   render() {
     return (
       <div className="App">
@@ -54,9 +59,14 @@ class App extends React.Component {
           <div>
           </div>
           <img src={logo} className="App-logo" alt="logo" />
-
-          <button onClick={this.generateCode}>소스로 변환 Convert [F12를 눌러 Console에서 확인 또는 붙여넣기]</button>
-
+          <button onClick={this.generateCode} style={{ background: "green", border: "none", color: "white" }}>📋복사하기 Copy to js </button>
+          <div>
+            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.help}>❓도움말 help </button>
+            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.exam}>🔑예시 example </button>
+          </div>
+          <div>
+            <ToastContainer />
+          </div>
           <BlocklyComponent ref={this.simpleWorkspace}
             readOnly={false} trashcan={true} media={'media/'}
             move={{
@@ -198,11 +208,11 @@ class App extends React.Component {
             <Category name="WeakSet" >            </Category>
           </BlocklyComponent>
         </header>
-        <iframe title="a" src="https://codepen.io/chriscoyier/embed/gfdDu" ></iframe>
-
+        <iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="450" width="100%" name="cp_embed_1" scrolling="no" src="https://codepen.io/codepen/embed/PNaGbb?height=450&amp;theme-id=23710&amp;slug-hash=PNaGbb&amp;default-tab=html%2Cresult&amp;user=codepen&amp;embed-version=2&amp;editable=true&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" ></iframe>
       </div>
     );
   }
 }
 
+//<iframe title="a" src="https://codepen.io/chriscoyier/embed/gfdDu" ></iframe>
 export default App;
