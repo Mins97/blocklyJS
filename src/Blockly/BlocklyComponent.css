@@ -1,6 +1,15 @@
 #blocklyDiv {
   height: 90%;
-  width: 100%;
+  width: 80%;
   position: absolute;
   bottom: 0;
+  left:0;
+}
+
+iframe{
+  position: absolute;
+  width:20%;
+  height:90%;
+  bottom:0;
+  right:0;
 }

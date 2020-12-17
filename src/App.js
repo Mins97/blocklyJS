@@ -36,21 +36,27 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.simpleWorkspace = React.createRef();
+    this.state = { headerToggle: true }
   }
 
   generateCode = () => {
     var code = BlocklyJS.workspaceToCode(
       this.simpleWorkspace.current.workspace
     );
+    navigator.clipboard.writeText(code);
     console.log(code);
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <header className="App-header" >
+          <div>
+          </div>
           <img src={logo} className="App-logo" alt="logo" />
-          <button onClick={this.generateCode}>소스로 변환 Convert [F12를 눌러 Console에서 확인]</button>
+
+          <button onClick={this.generateCode}>소스로 변환 Convert [F12를 눌러 Console에서 확인 또는 붙여넣기]</button>
+
           <BlocklyComponent ref={this.simpleWorkspace}
             readOnly={false} trashcan={true} media={'media/'}
             move={{
@@ -60,9 +66,10 @@ class App extends React.Component {
             }}
             initialXml={`
 <xml xmlns="http://www.w3.org/1999/xhtml">
-<block type="controls_ifelse" x="0" y="0"></block>
+<block type="controls_ifelse" x="500" y="100"></block>
 </xml>
       `}>
+
             <Category name="기본 라이브러리 함수들">
               <Category name="배열 list">
                 <Block type="lists_create_empty" />
@@ -190,8 +197,9 @@ class App extends React.Component {
             <Category name="WeakMap" >            </Category>
             <Category name="WeakSet" >            </Category>
           </BlocklyComponent>
-          <iframe></iframe>
         </header>
+        <iframe title="a" src="https://codepen.io/chriscoyier/embed/gfdDu" ></iframe>
+
       </div>
     );
   }
