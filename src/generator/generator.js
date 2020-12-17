@@ -38,3 +38,20 @@ Blockly.JavaScript['test_react_field'] = function (block) {
 Blockly.JavaScript['test_react_date_field'] = function (block) {
     return 'console.log(' + block.getField('DATE').getText() + ');\n';
 };
+
+
+/* 
+    사용자 함수 정의.
+    Copy To JS를 할 떄 console.log와 복사되는 부분입니다.
+*/
+
+Blockly.JavaScript['number'] = function (block) {
+    let result;
+    try {
+        result = block.getField('name').getText() + " = " + block.getText('value') + ";"
+    } catch (e) {
+        console.log(e);
+        result = block.getField('name').getText() + " = 0 ;"
+    }
+    return result;
+};

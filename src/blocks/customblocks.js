@@ -1,26 +1,3 @@
-/**
- * @license
- * 
- * Copyright 2019 Google LLC
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/**
- * @fileoverview Define custom blocks.
- * @author samelh@google.com (Sam El-Husseini)
- */
-
 // More on defining blocks:
 // https://developers.google.com/blockly/guides/create-custom-blocks/define-blocks
 
@@ -32,6 +9,27 @@ import '../fields/BlocklyReactField';
 import '../fields/DateField';
 
 //#region  CUSTOM MINS
+var number = {
+  "type": "",
+  "message0": '숫자 데이터 %1 = %2',
+  "args0": [
+    { "type": "field_variable", "name": "name", "variable": "num1" },
+    {
+      "type": "input_value",
+      "name": "value",
+      "variable": 0, "check": "Number"
+    }
+  ],
+  "colour": 310,
+  "tooltip": "",
+}
+
+Blockly.Blocks['number'] = {
+  init: function () {
+    this.jsonInit(number);
+  }
+};
+////////////////////////////////////////////////////////////////////
 var lengthof = {
   "type": "string_length",
   "message0": 'length of %1',
@@ -40,19 +38,21 @@ var lengthof = {
       "type": "input_value",
       "name": "VALUE",
       "check": "String"
-    }
+    },
   ],
   "output": "Number",
   "colour": 160,
   "tooltip": "Returns number of letters in the provided text.",
   "helpUrl": "http://www.w3schools.com/jsref/jsref_length_string.asp"
 }
+
 Blockly.Blocks['lengthof'] = {
   init: function () {
     this.jsonInit(lengthof);
     this.setStyle('loop_blocks');
   }
 };
+////////////////////////////////////////////////////////////////////
 
 var mathChangeJson = {
   "message0": "change %1 by %2",
@@ -76,6 +76,7 @@ Blockly.Blocks['math_change'] = {
     });
   }
 };
+////////////////////////////////////////////////////////////////////
 //#endregion CUSTOM MINS
 
 var testReactField = {
