@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "deploy": "npm run build && firebase deploy --only hosting:blocklyjs-50",
     "upload": "git add . && git commit -m \"readme.md 수정중\" && git push",
+    "open_git": "start chrome https://github.com/Mins97/blocklyJS",
     "open_firebase": "start chrome https://blocklyjs-50.web.app/",
     "push": "npm run deploy && npm run open_firebase && npm run upload"
   },

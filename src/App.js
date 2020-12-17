@@ -79,12 +79,62 @@ class App extends React.Component {
               <Block type="lists_reverse" />
             </Category>
 
+            <Category name="문자 text">
+              <Block type="text" />
+              <Block type="text_multiline" />
+              <Block type="text_join" />
+              <Block type="text_append" />
+              <Block type="text_length" />
+              <Block type="text_isEmpty" />
+              <Block type="text_indexOf" />
+              <Block type="text_charAt" />
+              <Block type="text_getSubstring" />
+              <Block type="text_changeCase" />
+              <Block type="text_trim" />
+              <Block type="text_print" />
+              <Block type="text_prompt_ext" />
+              <Block type="text_prompt" />
+              <Block type="text_count" />
+              <Block type="text_replace" />
+              <Block type="text_reverse" />
+            </Category>
+
+            <Category name="변수 variables_dynamic">
+              <Block type="variables_set" />
+              <Block type="variables_get" />
+            </Category>
+
             <Category name="반복 loop">
               <Block type="controls_repeat_ext" />
               <Block type="controls_repeat" />
               <Block type="controls_for" />
               <Block type="controls_forEach" />
               <Block type="controls_flow_statements" />
+            </Category>
+
+            <Category name="절차 procedures">
+              <Block type="procedures_defreturn" />
+              <Block type="procedures_defnoreturn" />
+              <Block type="procedures_callreturn" />
+              <Block type="procedures_callnoreturn" />
+              <Block type="procedures_ifreturn" />
+            </Category>
+
+            <Category name="수학 math">
+              <Block type="math_number" />
+              <Block type="math_arithmetic" />
+              <Block type="math_single" />
+              <Block type="math_constant" />
+              <Block type="math_number_property" />
+              <Block type="math_change" />
+              <Block type="math_round" />
+              <Block type="math_trig" />
+              <Block type="math_on_list" />
+              <Block type="math_modulo" />
+              <Block type="math_constrain" />
+              <Block type="math_random_int" />
+              <Block type="math_random_float" />
+              <Block type="math_atan2" />
             </Category>
 
             <Category name="조건(논리) logic">

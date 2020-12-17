@@ -57,4 +57,5 @@ A React component that embeds Blockly. It uses the official [Blockly npm package
 [blockly-demo](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)
 
 ### blockly의 내부 핵심 코드(npm i 필수)
-해당폴더:\blockly-samples-master\examples\blockly-react\node_modules\blockly\generators\javascript에서 colour.js/lists.js/login.js/loops.js/math.js/procedures.js/text.js/variables_dynamic.js/variables.js에서 확인한다.
+해당폴더:\blockly-samples-master\examples\blockly-react\node_modules\blockly\generators\javascript에서
+파일들 (colour.js/lists.js/login.js/loops.js/math.js/procedures.js/text.js/variables_dynamic.js/variables.js) 에서 확인한다.
