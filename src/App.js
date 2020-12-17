@@ -38,31 +38,24 @@ class App extends React.Component {
     });
   }
   help = () => {
-    prompt("❓아래의 내용을 JS가장 상단에 붙여 넣어주세요!\n\
-    그리고나서 그곳에 복사한 코드를 붙여넣어보세요! ", "document.getElementsByTagName(\"p\")[0].innerHTML  =\"여기에 값을 입력하세요.");
+    prompt("❓아래의 내용을 JS가장 상단에 붙여 넣어주세요! \n 그리고나서 그곳에 복사한 코드를 붙여넣어보세요! ", "document.getElementsByTagName(\"p\")[0].innerHTML  =\"여기에 값을 입력하세요.");
   }
   exam = () => {
-    prompt("🔑아래의 내용을 JS가장 상단에 붙여 넣어주세요!\n\
-    ", "if (true) {\
-	var a = 111;\
-    var b = 111;\
-  } else {\
-  var a = 999;\
-  var b = 999;\
-}\
-document.getElementsByTagName(\"p\")[0].innerHTML = a + b");
+    prompt("🔑아래의 내용을 JS가장 상단에 붙여 넣어주세요!", "if (true) { var a = 111; var b = 111; } else { var a = 999; var b = 999; document.getElementsByTagName(\"p\")[0].innerHTML = a + b");
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header" >
+        <header className="App-header" style={{ fontSize: 12 }}>
           <div>
           </div>
           <img src={logo} className="App-logo" alt="logo" />
           <button onClick={this.generateCode} style={{ background: "green", border: "none", color: "white" }}>📋복사하기 Copy to js </button>
-          <div>
-            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.help}>❓도움말 help </button>
-            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.exam}>🔑예시 example </button>
+          <div style={{ flexDirection: "row" }}>
+            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.help}>　　❓도움말 help　　</button>
+            <button style={{ background: "none", border: "none", color: "white" }} onClick={this.exam}>　　🔑예시 example　　</button>
+            　　📧tkarnrwl78627862@gmail.com
+          <a href="https://github.com/Mins97/blocklyJS" style={{ color: "white", textDecoration: "none" }} >　　🖥️https://github.com/Mins97/blocklyJS　　</a>
           </div>
           <div>
             <ToastContainer />
