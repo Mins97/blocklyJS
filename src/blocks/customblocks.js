@@ -9,24 +9,28 @@ import '../fields/BlocklyReactField';
 import '../fields/DateField';
 
 //#region  CUSTOM MINS
-var number = {
-  "type": "",
-  "message0": '숫자 데이터 %1 = %2',
-  "args0": [
-    { "type": "field_variable", "name": "name", "variable": "num1" },
-    {
-      "type": "input_value",
-      "name": "value",
-      "variable": 0, "check": "Number"
-    }
-  ],
-  "colour": 310,
-  "tooltip": "",
+var newVar =
+
+{
+  "type": "newVar",
+  "message0": "%1",
+  "args0": [{
+    "type": "field_variable",
+    "name": "VAR",
+    "variable": "%{BKY_VARIABLES_DEFAULT_NAME}"
+  }],
+  "style": "variable_dynamic_blocks",
+  "inputsInline": true,
+  "tooltip": "숫자를 데이터에 저장합니다.",
+  //"colour": 230,
+  "helpUrl": "",
+  "output": null,
+
 }
 
-Blockly.Blocks['number'] = {
+Blockly.Blocks['newVar'] = {
   init: function () {
-    this.jsonInit(number);
+    this.jsonInit(newVar);
   }
 };
 ////////////////////////////////////////////////////////////////////
@@ -36,7 +40,7 @@ var lengthof = {
   "args0": [
     {
       "type": "input_value",
-      "name": "VALUE",
+      "name": "VAR",
       "check": "String"
     },
   ],
@@ -98,7 +102,7 @@ Blockly.Blocks['test_react_field'] = {
     this.jsonInit(testReactField);
     this.setStyle('loop_blocks');
   }
-};
+}; T
 
 var reactDateField = {
   "type": "test_react_date_field",

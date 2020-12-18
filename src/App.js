@@ -69,7 +69,7 @@ class App extends React.Component {
             }}
             initialXml={`
 <xml xmlns="http://www.w3.org/1999/xhtml">
-<block type="number" x="250" y="100"></block>
+<block type="newVar" x="250" y="100"></block>
 </xml>
       `}>
 
@@ -192,7 +192,7 @@ class App extends React.Component {
             <Category name="JSON" >            </Category>
             <Category name="수학 Math" >            </Category>
             <Category name="숫자 Number" >
-              <Block type="number" />
+              <Block type="newVar" />
             </Category>
             <Category name="객체 Object" >            </Category>
             <Category name="정규식 RegExp" >            </Category>

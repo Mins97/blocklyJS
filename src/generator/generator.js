@@ -45,13 +45,6 @@ Blockly.JavaScript['test_react_date_field'] = function (block) {
     Copy To JS를 할 떄 console.log와 복사되는 부분입니다.
 */
 
-Blockly.JavaScript['number'] = function (block) {
-    let result;
-    try {
-        result = block.getField('name').getText() + " = " + block.getText('value') + ";"
-    } catch (e) {
-        console.log(e);
-        result = block.getField('name').getText() + " = 0 ;"
-    }
-    return result;
+Blockly.JavaScript['newVar'] = function (block) {
+    return block.getField('VAR').getText();
 };
