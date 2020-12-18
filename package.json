@@ -9,18 +9,19 @@
     "react-datepicker": "^3.3.0",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.1",
-    "react-toastify": "^6.2.0",
-    "webpack-cli": "^4.2.0"
+    "react-toastify": "^6.2.0"
   },
   "scripts": {
     "build": "react-scripts build",
     "audit": "npm audit fix",
     "start": "react-scripts start",
     "deploy": "npm run build && firebase deploy --only hosting:blocklyjs-50",
-    "upload": "git add . && git commit -m \"🤮 숫자 var 추가중..\" && git push",
+    "upload": "git add . && git commit -m \"에러 수정: 예제, npm script gitReset add\" && git push",
     "open_git": "start chrome https://github.com/Mins97/blocklyJS",
     "open_firebase": "start chrome https://blocklyjs-50.web.app/",
-    "push": "npm run deploy && npm run upload"
+    "push": "npm run deploy && npm run upload",
+    "webpack": "npm remove webpack -g && npm i webpack --save-dev",
+    "gitReset": "git reset HEAD"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^7.0.0"
+    "copy-webpack-plugin": "^7.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
   }
 }
